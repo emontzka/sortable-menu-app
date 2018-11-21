@@ -1,0 +1,64 @@
+{
+  "items": {
+    "item-1": {
+      "id": "item-1",
+      "name": "Soda",
+      "price": 2,
+      "category": "Beverage"
+    },
+    "item-2": {
+      "id": "item-2",      
+      "name": "Egg Rolls",
+      "price": 2,
+      "category": "Appetizer"
+    },
+    "item-3": {
+      "id": "item-3",      
+      "name": "Sweet N Sour Chicken",
+      "price": 9,
+      "category": "Entree"
+    },
+    "item-4": {
+      "id": "item-4",      
+      "name": "Mongolian Beef",
+      "price": 10,
+      "category": "Entree"
+    },  
+    "item-5": {
+      "id": "item-5",      
+      "name": "Kung Pao",
+      "price": 9,
+      "category": "Entree"
+    },   
+    "item-6": {
+      "id": "item-6",      
+      "name": "Fried Rice",
+      "price": 7,
+      "category": "Entree"
+    },   
+    "item-7": {
+      "id": "item-7",      
+      "name": "Pad See Ew",
+      "price": 10,
+      "category": "Entree"
+    }              
+  },
+  "categories": {
+    "cat-1": {
+      "id": "cat-1",
+      "name": "Beverage",
+      "itemsArray": ["item-1"]
+    },
+    "cat-2": {
+      "id": "cat-2",      
+      "name": "Appetizer",
+      "itemsArray": ["item-2"]      
+    },
+    "cat-3": {
+      "id": "cat-3",      
+      "name": "Entree",
+      "itemsArray": ["item-3","item-4","item-6","item-7","item-5"]      
+    }    
+  },
+  "catOrder" : ["cat-1", "cat-2", "cat-3" ]
+}
