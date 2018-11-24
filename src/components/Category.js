@@ -9,7 +9,7 @@ background-color: light-gray;
 `;
 
 const ItemList = styled.div`
-background-color: pink;
+background-color: #eeeeee;
 padding: 10px;
 `;
 

@@ -11,7 +11,7 @@ min-height: 80px;
 
 export default class MenuItem extends Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       
       <Draggable draggableId={this.props.menuObj.id} index={this.props.index}>
