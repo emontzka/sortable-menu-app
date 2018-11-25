@@ -9,43 +9,6 @@ import Category from "./Category";
 
 export default class AdminPage extends Component {
 
-
-
-  // onDragEnd = result => {
-  //   const { destination, source, draggableId } = result;
-    
-  //   if (!destination) {
-  //     return;
-  //   }
-  //   // Return if item is dropped in original location
-  //   if (
-  //     destination.droppableId === source.droppableId &&
-  //     destination.index === source.index
-  //   ) {
-  //     return;
-  //   }
-
-  //   const catSource = this.state.categories[source.droppableId];
-  //   const newMenuIds = Array.from(catSource.itemsArray);
-  //   newMenuIds.splice(source.index, 1);
-  //   newMenuIds.splice(destination.index, 0, draggableId);
-
-  //   const newCat = {
-  //     ...catSource,
-  //     itemsArray: newMenuIds,
-  //   };
-
-  //   const newState = {
-  //     ...this.state,
-  //     categories: {
-  //       ...this.state.categories,
-  //       [newCat.id] : newCat
-  //     },
-  //   };
-
-  //   this.setState(newState);
-  //};
-
   render() {
     return (
       
