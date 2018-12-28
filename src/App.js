@@ -5,7 +5,7 @@ import 'semantic-ui-css/semantic.min.css';
 import data from "./data/mockAPI.json";
 import { DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 
-import Category from "./components/Category";
+import Category from "./components/EditCategory";
 import MenuPage from "./components/MenuPage";
 import AdminPage from "./components/AdminPage";
 
@@ -39,6 +39,7 @@ class App extends Component {
  onDragEnd = result => {
     const { destination, source, draggableId } = result;
     console.log(result);
+    console.log(result.droppableId)
     
     if (!destination) {
       return;
@@ -78,6 +79,19 @@ class App extends Component {
       this.setState(newState);
       return;
     }
+    //Handle item moved to new category
+    // const newMenuItems = {
+    //   ...items,
+    //   items[draggableId].category: destination.droppableId
+    // }
+
+    const newItem = {
+      ...this.state.items[draggableId],
+      category: this.state.categories[destination.droppableId].name
+    }
+    console.log('new item', newItem);
+
+
 
     const startItemsArray = Array.from(start.itemsArray);
     startItemsArray.splice(source.index, 1);
@@ -99,6 +113,10 @@ class App extends Component {
         [newStart.id]: newStart,
         [newFinish.id]: newFinish,
       },
+      items: {
+        ...this.state.items,
+        [newItem.id]: newItem
+      }
     };
 
     this.setState(newState);
@@ -111,7 +129,15 @@ class App extends Component {
       <Router>
         <div className="App">
           <header>Header</header>
-          <Route path="/" component={MenuPage} />
+          <Links />
+          <Route exact path="/" 
+          render={() => (
+            <MenuPage
+              items={this.state.items}
+              categories={this.state.categories}
+              catOrder={this.state.catOrder}
+            />
+          )} />
           <Route
             path="/admin"
             render={() => (
