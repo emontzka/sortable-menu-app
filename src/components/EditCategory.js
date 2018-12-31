@@ -18,7 +18,7 @@ export default class EditCategory extends Component {
     const { id, name, itemsArray } = this.props.catObject;
     const { items } = this.props.items;
     return (
-      <Container>
+      <Container className='item-list-parent'>
         <h2 className="ui header">Edit {name}s</h2>
         <Droppable droppableId={this.props.catObject.id}>
           {(provided, snapshot) => (
@@ -26,6 +26,7 @@ export default class EditCategory extends Component {
               ref={provided.innerRef}
               {...provided.droppableProps}
               isDraggingOver={snapshot.isDraggingOver}
+              className='item-list'
             >
               {this.props.catObject.itemsArray.map((itemInCat, index) => (
                 <EditMenuItem

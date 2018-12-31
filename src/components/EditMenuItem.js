@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Container = styled.div`
 background-color: ${props => (props.isDragging ? 'lightgray' : 'white')};
 margin: 10px;
-min-height: 80px;
+padding: 20px 50px 20px 20px;
 border: ${props => (props.isDragging ? '1px dotted gray' : 'none')};
 `;
 
@@ -21,7 +21,7 @@ export default class MenuItem extends Component {
         {...provided.dragHandleProps}  
         ref={provided.innerRef} 
         isDragging={snapshot.isDragging}
-        className="one column row "
+        className="styled-container"
         >{this.props.menuObj.name}
         </Container>}
       </Draggable>
