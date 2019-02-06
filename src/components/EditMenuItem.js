@@ -10,6 +10,12 @@ padding: 20px 50px 20px 20px;
 border: ${props => (props.isDragging ? '1px dotted gray' : 'none')};
 `;
 
+const EditButton = styled.button`
+  background-color: gray;
+  color: white;
+
+`;
+
 export default class MenuItem extends Component {
   render() {
     return (
@@ -23,6 +29,7 @@ export default class MenuItem extends Component {
         isDragging={snapshot.isDragging}
         className="styled-container"
         >{this.props.menuObj.name}
+        <EditButton>Edit</EditButton>
         </Container>}
       </Draggable>
 

@@ -39,7 +39,7 @@ class App extends Component {
  onDragEnd = result => {
     const { destination, source, draggableId } = result;
     console.log(result);
-    console.log(result.droppableId)
+    console.log(result.draggableId)
     
     if (!destination) {
       return;
@@ -100,6 +100,7 @@ class App extends Component {
       itemsArray: startItemsArray
     }
     const finishItemsArray = Array.from(finish.itemsArray);
+    console.log('finishedItemsArray ', finishItemsArray)
     finishItemsArray.splice(destination.index,0, draggableId);
     const newFinish = {
       ...finish,

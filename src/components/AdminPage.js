@@ -7,6 +7,7 @@ import EditCategory from "./EditCategory";
 
 const CategoryParent = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 export default class AdminPage extends Component {

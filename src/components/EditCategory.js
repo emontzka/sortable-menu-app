@@ -6,6 +6,11 @@ import EditMenuItem from "./EditMenuItem";
 const Container = styled.div`
   margin: 10px;
   background-color: light-gray;
+  width: 100%;
+
+  @media (min-width: 900px) {
+    width: calc(33.33% - 20px);
+  }
 `;
 
 const ItemList = styled.div`
